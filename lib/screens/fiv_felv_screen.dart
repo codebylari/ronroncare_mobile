@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/app_drawer.dart';
 
-class EmergencyScreen extends StatelessWidget {
-  const EmergencyScreen({super.key});
+class FivFelvScreen extends StatelessWidget {
+  const FivFelvScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -17,7 +18,7 @@ class EmergencyScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Emergência",
+          "FIV & FeLV",
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w600,
             color: theme.textTheme.titleLarge?.color,
@@ -51,65 +52,90 @@ class EmergencyScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             Text(
-              "🚑 Emergências Felinas",
+              "FIV e FeLV: doenças silenciosas\ne perigosas em gatos",
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 color: const Color(0xff5EB6F5),
-                fontSize: 22,
                 fontWeight: FontWeight.w600,
+                fontSize: 22,
               ),
             ),
 
             const SizedBox(height: 12),
 
             Text(
-              "Saber identificar sinais de emergência pode salvar a vida do seu gato.",
+              "Muitos tutores ainda desconhecem essas doenças, que podem evoluir de forma silenciosa e comprometer seriamente a saúde do animal.",
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
+                height: 1.5,
                 color: theme.textTheme.bodyLarge?.color,
               ),
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 22),
 
             _card(
               context,
-              "⚠ Sinais de emergência",
-              "• Dificuldade para respirar\n"
-              "• Convulsões\n"
-              "• Vômitos persistentes\n"
-              "• Paralisia\n"
-              "• Sangramentos\n"
-              "• Ingestão de substâncias tóxicas\n"
-              "• Fraturas",
+              "O que é FIV? 🐾",
+              "A FIV (Vírus da Imunodeficiência Felina) compromete o sistema imunológico do gato, tornando-o mais vulnerável a infecções.\n\nEmbora não tenha cura, o tratamento adequado proporciona qualidade de vida.",
             ),
 
             const SizedBox(height: 18),
 
             _card(
               context,
-              "🩺 O que fazer?",
-              "Mantenha a calma.\n\nLeve imediatamente o animal até uma clínica veterinária.\n\nNunca ofereça medicamentos sem orientação.",
+              "O que é FeLV? 🧬",
+              "A FeLV é uma doença viral altamente contagiosa entre gatos e pode causar anemia, tumores e outras complicações.\n\nO diagnóstico precoce aumenta significativamente a expectativa de vida.",
             ),
 
             const SizedBox(height: 18),
 
             _card(
               context,
-              "💡 Prevenção",
-              "Mantenha consultas em dia.\n"
-              "Evite acesso a produtos tóxicos.\n"
-              "Proteja janelas e varandas.\n"
-              "Observe mudanças de comportamento.",
+              "Sintomas ⚠",
+              "• Perda de peso\n"
+              "• Febre persistente\n"
+              "• Falta de apetite\n"
+              "• Infecções frequentes\n"
+              "• Problemas bucais\n"
+              "• Letargia\n"
+              "• Anemia",
             ),
 
             const SizedBox(height: 18),
 
             _card(
               context,
-              "🚨 Atendimento 24h",
-              "Nossa equipe está disponível 24 horas para atender emergências e orientar os tutores.",
-            ),            const SizedBox(height: 25),
+              "Quando testar o gato? 💉",
+              "Filhotes podem ser testados a partir das primeiras semanas conforme orientação veterinária.\n\nGatos adultos também devem ser testados antes do contato com outros gatos.",
+            ),            const SizedBox(height: 18),
+
+            _card(
+              context,
+              "Atendimento 24h 🚑",
+              "A RonronCare oferece atendimento para emergências e orientações, garantindo suporte rápido sempre que necessário.",
+            ),
+
+            const SizedBox(height: 18),
+
+            _card(
+              context,
+              "Como prevenir? 🛡",
+              "• Manter o gato dentro de casa\n"
+              "• Vacinação quando indicada\n"
+              "• Testes regulares\n"
+              "• Evitar contato com gatos desconhecidos",
+            ),
+
+            const SizedBox(height: 18),
+
+            _card(
+              context,
+              "Base científica 📚",
+              "As informações são baseadas nas diretrizes da American Association of Feline Practitioners (AAFP).",
+            ),
+
+            const SizedBox(height: 24),
 
             Text(
               "© 2026 RonronCare | Atendimento 24h 🐾",
@@ -132,6 +158,7 @@ class EmergencyScreen extends StatelessWidget {
     String titulo,
     String texto,
   ) {
+
     final theme = Theme.of(context);
 
     return Card(
@@ -153,8 +180,8 @@ class EmergencyScreen extends StatelessWidget {
               titulo,
               style: GoogleFonts.poppins(
                 color: const Color(0xff5EB6F5),
-                fontSize: 18,
                 fontWeight: FontWeight.w600,
+                fontSize: 18,
               ),
             ),
 
@@ -163,6 +190,7 @@ class EmergencyScreen extends StatelessWidget {
             Text(
               texto,
               style: GoogleFonts.poppins(
+                fontSize: 14,
                 height: 1.6,
                 color: theme.textTheme.bodyLarge?.color,
               ),
