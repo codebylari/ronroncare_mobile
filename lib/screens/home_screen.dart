@@ -57,23 +57,15 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            ClipRRect(
-              borderRadius: BorderRadius.circular(18),
-              child: Container(
-                height: 220,
-                width: double.infinity,
-                color: theme.brightness == Brightness.dark
-                    ? const Color(0xff394867)
-                    : Colors.grey.shade300,
-
-                child: const Center(
-                  child: Text(
-                    "Imagem do gatinho",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-              ),
+                      ClipRRect(
+            borderRadius: BorderRadius.circular(18),
+            child: Image.asset(
+              "assets/images/home.jpg",
+              height: 220,
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
+          ),
 
             const SizedBox(height: 20),
 

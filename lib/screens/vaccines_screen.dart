@@ -54,18 +54,13 @@ class VaccinesScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            ClipRRect(
+                        ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: Container(
+              child: Image.asset(
+                "assets/images/vacinas.jpg",
                 height: 180,
                 width: double.infinity,
-                color: theme.brightness == Brightness.dark
-                    ? const Color(0xff394867)
-                    : Colors.grey.shade300,
-
-                child: const Center(
-                  child: Text("Imagem do gatinho"),
-                ),
+                fit: BoxFit.cover,
               ),
             ),
 

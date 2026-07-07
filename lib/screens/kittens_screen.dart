@@ -53,17 +53,13 @@ class KittensScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            ClipRRect(
+                        ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: Container(
+              child: Image.asset(
+                "assets/images/filhotes.jpg",
                 height: 190,
                 width: double.infinity,
-                color: theme.brightness == Brightness.dark
-                    ? const Color(0xff394867)
-                    : Colors.grey.shade300,
-                child: const Center(
-                  child: Text("Imagem dos filhotes"),
-                ),
+                fit: BoxFit.cover,
               ),
             ),
 
